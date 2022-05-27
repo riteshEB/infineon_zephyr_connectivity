@@ -57,6 +57,13 @@ if(CONFIG_SOC_FAMILY_CAT1A)
       zephyr_library_sources_ifdef(CONFIG_SOC_DIE_PSOC6_03 psoc6cm0p/COMPONENT_CM0P_SLEEP/psoc6_03_cm0p_sleep.c)
       zephyr_library_sources_ifdef(CONFIG_SOC_DIE_PSOC6_04 psoc6cm0p/COMPONENT_CM0P_SLEEP/psoc6_04_cm0p_sleep.c)
   endif()
+
+  # PSoC 64 Cortex M0+ Secure prebuilt image
+  if(CONFIG_SOC_PSOC6_CM0P_SECURE)
+    zephyr_library_sources_ifdef(CONFIG_SOC_DIE_PSOC6_01 psoc6cm0p/COMPONENT_CM0P_SECURE/psoc6_01_cm0p_secure.c)
+    zephyr_library_sources_ifdef(CONFIG_SOC_DIE_PSOC6_02 psoc6cm0p/COMPONENT_CM0P_SECURE/psoc6_02_cm0p_secure.c)
+    zephyr_library_sources_ifdef(CONFIG_SOC_DIE_PSOC6_03 psoc6cm0p/COMPONENT_CM0P_SECURE/psoc6_03_cm0p_secure.c)
+  endif()
 endif()
 
 
